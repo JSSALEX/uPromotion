@@ -77,30 +77,4 @@ window.addEventListener('load', () => {
     function pagePrint() {
         window.print()
     }
-
-    function ajustarTamanhoFonte(elemento) {
-        const larguraElemento = elemento.offsetWidth; // Largura do elemento
-        const larguraTexto = elemento.scrollWidth; // Largura do texto
-      
-        if (larguraTexto > larguraElemento) {
-          // Texto ocupa mais de uma linha, reduz o tamanho da fonte
-          elemento.style.fontSize = "35px"; // Tamanho da fonte menor
-        } else {
-          // Texto cabe em uma linha, aumenta o tamanho da fonte
-          elemento.style.fontSize = "50px"; // Tamanho da fonte maior
-        }
-      }
-      
-      // Seleciona todos os elementos <h2>
-      const elementosH2 = document.querySelectorAll("h2");
-      
-      // Itera sobre os elementos <h2> e ajusta o tamanho da fonte
-      elementosH2.forEach(elemento => {
-        ajustarTamanhoFonte(elemento);
-      
-        // Ajusta o tamanho da fonte quando o texto for alterado (ex: conteúdo dinâmico)
-        elemento.addEventListener("DOMCharacterDataModified", () => {
-          ajustarTamanhoFonte(elemento);
-        });
-      });
 })

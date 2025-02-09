@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-Br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/styles/main-style.css">
+  <link rel="stylesheet" href="./src/styles/components-style.css">
+  <title>uPromotion</title>
+</head>
+
+<body>
+  <div id="app">
+    <div id="sidebar-main">
+      <div class='logo'>
+        <h1>uPromotio</h1>
+      </div><!--logo-->
+
+      <div class='create-promotion'>
+        <div class='input'>
+          <label htmlFor="title">TITULO DA PROMOÇÃO</label>
+          <input type="text" id='title' placeholder='Promoção de Janeiro...' tabIndex={1} />
+        </div>
+
+        <div class='inputs'>
+          <div class='input duo'>
+            <label htmlFor="date-beggin">INICIO</label>
+            <input type="text" id='date-beggin' maxlength="10" placeholder='dd-mm-aaaa' tabIndex={2} />
+          </div>
+
+          <div class='input duo'>
+            <label htmlFor="date-end">FIM</label>
+            <input type="text" id='date-end' maxlength="10" placeholder='dd-mm-aaaa' tabIndex={3} />
+          </div>
+        </div>
+
+        <div class='input'>
+          <label htmlFor="name">NOME DO PRODUTO</label>
+          <input type="text" id='name' maxlength="54" placeholder='Desodorante Rexona Fragrâncias...' tabIndex={4} />
+        </div>
+
+        <div class='inputs'>
+          <div class='input duo'>
+            <label htmlFor='price'>PREÇO</label>
+            <input type="text" id='price' placeholder='R$ 4,99' tabIndex={5} />
+          </div>
+          <div class='input duo'>
+            <label htmlFor='unit'>UNIDADE</label>
+            <input type="text" id='unit' placeholder='kg, und, pack' tabIndex={6} />
+          </div>
+        </div>
+
+        <button id="btn-create" tabIndex={6}>ADD</button>
+      </div><!--create-promotion-->
+
+      <button id="btn-print">IMPRIMIR</button>
+
+    </div><!--sidebar-main-->
+
+    <div id="previewcontent-main">
+      <div class="sheet-preview"></div>
+    </div><!--previewcontent-main-->
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

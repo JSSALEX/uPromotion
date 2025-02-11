@@ -145,7 +145,7 @@ button:hover {
 }
 
 .sheet-content h1 {
-    font-size: calc(65px/var(--scale-sheet));
+    font-size: calc(75px/var(--scale-sheet));
     margin: 1mm 0;
 }
 
@@ -155,7 +155,7 @@ button:hover {
 }
 
 .sheet-content h2 {
-    font-size: calc(30px/var(--scale-sheet));
+    font-size: calc(40px/var(--scale-sheet));
     margin: 8mm 0;
 }
 
@@ -167,12 +167,12 @@ button:hover {
 }
 
 .price h3 {
-    font-size: calc(60px/var(--scale-sheet));
+    font-size: calc(75px/var(--scale-sheet));
     font-weight: 700;
 }
 
 .price .unit p {
-    font-size: calc(20px/var(--scale-sheet));
+    font-size: calc(35px/var(--scale-sheet));
     font-weight: 700;
     margin-bottom: 0.7rem;
 }
@@ -180,6 +180,10 @@ button:hover {
 @media print {
     @page {
         margin: 0;
+        padding: 0;
+    }
+    * {
+        box-sizing: border-box;
     }
 
     #previewcontent-main {
@@ -201,7 +205,7 @@ button:hover {
     }
 
     .sheet-content h1 {
-        font-size: 65px;
+        font-size: 75px;
 
     }
 
@@ -211,15 +215,15 @@ button:hover {
     }
 
     .sheet-content h2 {
-        font-size: 35px;
+        font-size: 40px;
     }
 
     .price h3 {
-        font-size: 65px;
+        font-size: 75px;
     }
 
     .price .unit p {
-        font-size: 25px;
+        font-size: 35px;
     }
 
 }

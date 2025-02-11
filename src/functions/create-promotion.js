@@ -8,14 +8,17 @@ export function CreatePromotion(_title, _date, _description, _price, _unit) {
 
     const title = document.createElement('h1')
     title.innerText = _title
+    title.classList.add('editable')
     content.appendChild(title)
 
     const date = document.createElement('span')
     date.innerText = _date
+    date.classList.add('editable')
     content.appendChild(date)
 
     const description = document.createElement('h2')
     description.innerText = _description
+    description.classList.add('editable')
     content.appendChild(description)
 
     const divPrice = document.createElement('div')
@@ -24,6 +27,7 @@ export function CreatePromotion(_title, _date, _description, _price, _unit) {
 
     const price = document.createElement('h3')
     price.innerText = _price
+    price.classList.add('editable')
     divPrice.appendChild(price)
 
     const divUnit = document.createElement('div')
@@ -32,6 +36,7 @@ export function CreatePromotion(_title, _date, _description, _price, _unit) {
 
     const unit = document.createElement('p')
     unit.innerText = _unit
+    unit.classList.add('editable')
     divUnit.appendChild(unit)
 
     if(currentPage.children.length < 2) {

@@ -21,6 +21,9 @@ window.addEventListener('load', () => {
             description.value = ''
             price.value = ''
             unit.value = ''
+
+            editTexts()
+
         } else {
             alert('Todos campos de texto devem estar preenchido.')
         }
@@ -76,5 +79,26 @@ window.addEventListener('load', () => {
 
     function pagePrint() {
         window.print()
+    }
+
+    function editTexts() {
+        const textEditable = document.querySelectorAll('.editable')
+        textEditable.forEach(elemento => {
+            elemento.addEventListener('dblclick', () => {
+                elemento.contentEditable = true;
+                elemento.focus();
+
+                elemento.addEventListener('blur', () => {
+                    elemento.contentEditable = false;
+                })
+
+                elemento.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter') {
+                        elemento.contentEditable = false;
+                        elemento.blur();
+                    }
+                })
+            })
+        })
     }
 })
